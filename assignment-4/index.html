@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Facebook Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      width: 360px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #1877f2;
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .gender-options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .gender-options label {
+      flex: 1;
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 0 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .gender-options input {
+      display: none;
+    }
+
+    .gender-options input:checked + label {
+      background-color: #e7f3ff;
+      border-color: #1877f2;
+    }
+
+    .signup-btn {
+      background-color: #42b72a;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .signup-btn:hover {
+      background-color: #36a420;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-link a {
+      color: #1877f2;
+      text-decoration: none;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>facebook</h1>
+  <h2>Create a new account</h2>
+  <p style="text-align: center;">It's quick and easy.</p>
+
+  <form>
+    <input type="text" name="firstname" placeholder="First name" required />
+    <input type="text" name="surname" placeholder="Surname" required />
+
+    <label for="dob-day">Date of birth</label>
+    <div style="display: flex; gap: 10px;">
+      <select name="dob-day" id="dob-day" required>
+        <option value="">Day</option>
+        ${[...Array(31)].map((_, i) => `<option>${i + 1}</option>`).join('')}
+      </select>
+      <select name="dob-month" id="dob-month" required>
+        <option value="">Month</option>
+        ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+          .map(month => `<option>${month}</option>`).join('')}
+      </select>
+      <select name="dob-year" id="dob-year" required>
+        <option value="">Year</option>
+        ${[...Array(100)].map((_, i) => `<option>${2025 - i}</option>`).join('')}
+      </select>
+    </div>
+
+    <label>Gender</label>
+    <div class="gender-options">
+      <input type="radio" name="gender" id="female" value="Female" required />
+      <label for="female">Female</label>
+
+      <input type="radio" name="gender" id="male" value="Male" />
+      <label for="male">Male</label>
+
+      <input type="radio" name="gender" id="custom" value="Custom" />
+      <label for="custom">Custom</label>
+    </div>
+
+    <input type="email" name="email" placeholder="Mobile number or email address" required />
+    <input type="password" name="password" placeholder="New password" required />
+
+    <button class="signup-btn" type="submit">Sign Up</button>
+  </form>
+
+  <div class="login-link">
+    <p><a href="#">Already have an account?</a></p>
+  </div>
+</div>
+
+</body>
+</html>
