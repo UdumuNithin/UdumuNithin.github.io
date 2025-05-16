@@ -103,7 +103,7 @@ section {
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  background-color: #100d0d;
+  background-color: #865f5f;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.4s, transform 0.4s, color 0.4s;
   cursor: pointer;
@@ -116,7 +116,7 @@ section {
 }
 
 .project-card:hover a {
-  color: rgb(8, 5, 5);
+  color: rgb(231, 220, 220);
 }
 
 /* SERVICES */
