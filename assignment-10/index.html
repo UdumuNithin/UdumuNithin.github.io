@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .row div {
+      background-color: burlywood;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .row img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body onload="dispproducts()">
+  <h1 style="text-align: center;">Assignment-10</h1>
+  <p style="text-align: center;">
+    <input type="number" id="textid" placeholder="id" />
+    <input type="text" id="textname" placeholder="name" />
+    <input type="number" id="textprice" placeholder="price" />
+    <input type="text" id="texturl" placeholder="url" />
+    <button onclick="addproduct()">Add</button>
+  </p>
+  <div id="container" class="row"></div>
+
+  <script>
+    let products = [
+      { id: 1, name: "Apple", price: 250, imgUrl: "https://picsum.photos/id/11/200/200" },
+      { id: 2, name: "Orange", price: 100, imgUrl: "https://picsum.photos/id/12/200/200" },
+      { id: 3, name: "Mango", price: 80, imgUrl: "https://picsum.photos/id/13/200/200" },
+    ];
+
+    function addproduct() {
+      let id = document.querySelector("#textid").value;
+      let name = document.querySelector("#textname").value;
+      let price = document.querySelector("#textprice").value;
+      let imgUrl = document.querySelector("#texturl").value;
+
+      const obj = {
+        id: parseInt(id),
+        name,
+        price: parseFloat(price),
+        imgUrl,
+      };
+
+      products.push(obj);
+      dispproducts();
+    }
+
+    function deleteProduct(id) {
+      products = products.filter(product => product.id !== id);
+      dispproducts();
+    }
+
+    function dispproducts() {
+      let str = "";
+      products.forEach((value) => {
+        str += `<div>
+                  <img src="${value.imgUrl}" alt="${value.name}" />
+                  <h2>${value.name}</h2>
+                  <h3>&#8377;${value.price}</h3>
+                  <button>Add to Cart</button>
+                  <button onclick="deleteProduct(${value.id})">Delete</button>
+                </div>`;
+      });
+      document.getElementById("container").innerHTML = str;
+    }
+  </script>
+</body>
+</html>
