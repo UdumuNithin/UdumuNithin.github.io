@@ -103,15 +103,15 @@ section {
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  background-color: #865f5f;
-  box-shadow: 2px 2px 5px rgba(227, 197, 136, 0.1);
+  background-color: #ae6363;
+  box-shadow: 2px 2px 5px rgba(185, 88, 88, 0.1);
   transition: background-color 0.4s, transform 0.4s, color 0.4s;
   cursor: pointer;
 }
 
 .project-card:hover {
   background-color: rgb(224, 64, 115);
-  color: rgb(37, 11, 11);
+  color: rgb(196, 152, 110);
   transform: scale(1.05);
 }
 
