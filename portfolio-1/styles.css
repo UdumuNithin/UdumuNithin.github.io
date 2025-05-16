@@ -82,8 +82,8 @@ section {
 /* SIGN UP BUTTON */
 .signup-button {
   padding: 10px 20px;
-  background-color: green;
-  color: white;
+  background-color: rgb(50, 106, 50);
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -99,24 +99,24 @@ section {
 
 /* PROJECT CARDS */
 .project-card {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  background-color: #fafafa;
+  background-color: #100d0d;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.4s, transform 0.4s, color 0.4s;
   cursor: pointer;
 }
 
 .project-card:hover {
-  background-color: turquoise;
-  color: white;
+  background-color: rgb(224, 64, 115);
+  color: rgb(37, 11, 11);
   transform: scale(1.05);
 }
 
 .project-card:hover a {
-  color: white;
+  color: rgb(8, 5, 5);
 }
 
 /* SERVICES */
@@ -134,7 +134,7 @@ section {
 }
 
 .services-list li:hover {
-  background-color: #f8d7da;
+  background-color: #141212;
   color: black;
   transform: scale(1.05);
 }
@@ -154,8 +154,8 @@ section {
 }
 
 .skills-container li:hover {
-  background-color: #fff9c4;
-  color: black;
+  background-color: #1b1a13;
+  color: rgb(239, 233, 233);
   transform: scale(1.05);
 }
 
@@ -169,8 +169,8 @@ section {
 }
 
 .contact-item:hover {
-  background-color: #e3f2fd;
-  color: black;
+  background-color: #0c0d0d;
+  color: rgb(238, 233, 233);
   transform: scale(1.05);
 }
 
@@ -182,7 +182,7 @@ section {
 footer {
   text-align: center;
   padding: 5px;
-  background-color: turquoise;
+  background-color: rgb(90, 15, 26);
   color: white;
   position: fixed;
   width: 100%;
