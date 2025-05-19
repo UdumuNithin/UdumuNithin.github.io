@@ -48,7 +48,7 @@ nav ul li a:hover {
 section {
   padding: 20px;
   margin: 20px;
-  background-color: white;
+  background-color: rgba(64, 117, 137, 0.237);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
