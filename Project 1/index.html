@@ -1,77 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FoodMart Grocery Store</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
-  <header>
-    <div class="top-bar">
-      <div class="logo">FOOD<span>MART</span><small>GROCERY STORE</small></div>
-      <div class="search-bar">
-        <select>
-          <option>All Categories</option>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="images/logo.png" alt="logo" width="200px" />
+        <div class="search-container">
+          <select style="color: gray">
+            <option>All Categories</option>
+            <option>Smoothies </option>
+            <option>juices</option>
+            <option>veggies </option>
+            <option>Fruits </option>
+            <option>Honey</option>
+            <option>wine</option>
+            <option>Non-veg</option>
+            <option>herbs </option>
+            <option>Baked products</option>
+            <option>Sweets</option>
+          </select>
+          <input
+            class="search-input"
+            type="text"
+            placeholder="search here"
+          />
+          <span class="search-icon">&#128269;</span>
+        </div>
+        <div class="contact">
+          <h4 style="color: gray">For Support?</h4>
+          <h3>+91-8306309059</h3>
+        </div>
+        <div class="cart">
+          <h4 style="color: gray">Your Cart ▾</h4>
+          <h3>₹1090.00</h3>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="departments">
+        <select style="color: gray">
+          <option>Shop by Departments</option>
+          <option>Smoothies </option>
+            <option>juices</option>
+            <option>veggies </option>
+            <option>Fruits </option>
+            <option>Honey</option>
+            <option>wine</option>
+            <option>Non-veg</option>
+            <option>herbs </option>
+            <option>Baked products</option>
+            <option>Sweets</option>
         </select>
-        <input type="text" placeholder="Search for more than 20000 products"/>
-        <button>🔍</button>
-      </div>
-      <div class="support">
-        <p>For Support?</p>
-        <p>+980-34984089</p>
-      </div>
-      <div class="icons">
-        <span>❤️</span>
-        <span>👤</span>
-        <span class="cart">Your Cart ▼<strong>$1290.00</strong></span>
-      </div>
+        <div class="menu" style="color: gray">
+          <span>Women</span>
+          <span>Men</span>
+          <span>Kids</span>
+          <span>Accessories</span>
+          <span>Pages▾</span>
+          <span>Brand</span>
+          <span>Sale</span>
+          <span>Blog</span>
+        </div>
+      </section>
+      <section class="ads">
+        <div class="left-ad">
+          <h4>100% Natural</h4>
+          <h1>
+            Fresh Smoothie <br />
+            & Summer Juice
+          </h1>
+          <p>
+            Buy these smoothies and juices which are natural <br />
+            and freshly made from organic fruits.
+          </p>
+          <button onclick="this.style.backgroundColor='green';this.style.color='white'">Shop Now</button>
+          <img src="images/product-thumb-1.png" alt="juice" />
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="right-ads">
+          <div class="ad-box green">
+            <h2>20% Off</h2>
+            <p class="sale">-- SALE</p>
+            <h3>Fruits & Vegetables</h3>
+            <a href="#">Shop Collection →</a>
+            <img src="images/ad-image-1.png" alt="veggie" />
+          </div>
+          <div class="ad-box peach">
+            <h2>15% Off</h2>
+            <p class="sale">-- SALE</p>
+            <h3>Baked Products</h3>
+            <a href="#">Shop Collection →</a>
+            <img src="images/ad-image-2.png" alt="baked" />
+          </div>
+        </div>
+      </section>
+      <section class="category-section">
+        <div class="category-header">
+          <h2><b>CATEGORY</b></h2>
+          <div class="view-all"> 
+            <button>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card">
+            <img
+              src="images/icon-vegetables-broccoli.png"
+              alt="Fruits & Veges"
+            />
+            <p>Fruits & Veges</p>
+          </div>
+          <div class="category-card">
+            <img src="images/icon-bread-baguette.png" alt="Breads & Sweets" />
+            <p>Breads & Sweets</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="images/icon-soft-drinks-bottle.png"
+              alt="Fruits & Veges"
+            />
+            <p>Soft drinks</p>
+          </div>
+          <div class="category-card">
+            <img src="images/icon-wine-glass-bottle.png" alt="Fruits & Veges" />
+            <p>Wine</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="images/icon-animal-products-drumsticks.png"
+              alt="Fruits & Veges"
+            />
+            <p>Non-veg</p>
+          </div>
+          <div class="category-card">
+            <img src="images/icon-bread-herb-flour.png" alt="Fruits & Veges" />
+            <p>Herbs</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="newly-arrived-section">
+        <div class="container">
+          <div class="header">
+            <h2>Newly Arrived</h2>
+            <span class="categories-link">View All Categories →</span>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <img src="images/thumb-junk.jpg" alt="Product 4" />
+              <div class="title">Snacks pack</div>
+              <div class="description">Crunchy snacks yummy yummy</div>
+            </div>
+            <div class="card">
+              <img src="images/product-thumb-11.jpg" alt="Product 5" />
+              <div class="title">honey GoldenDrip</div>
+              <div class="description">pure gold in every drop</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trending-products">
+        <div class="container">
+          <div class="section-header">
+            <h2>Trending Products</h2>
+            <div class="filters">
+              <span class="filter active">All</span>
+              <span class="filter">Fruits & Veggies</span>
+              <span class="filter">Juices</span>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="discount-badge">-30%</div>
+              <div class="favorite">&#9825;</div>
+              <img src="images/thumb-bananas.png" alt="Product" />
+              <h4>Sunstar Fresh Bananas</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.7</span></p>
+              <p class="price">₹30.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="discount-badge">-20%</div>
+              <div class="favorite">&#9825;</div>
+              <img src="images/thumb-biscuits.png" alt="Product" />
+              <h4>Sunstar Fresh Biscuits</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.8</span></p>
+              <p class="price">₹60.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <div class="discount-badge">-10%</div>
+              <img src="images/thumb-cucumber.png" alt="Product" />
+              <h4>Sunstar Fresh Cucumber</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.7</span></p>
+              <p class="price">₹30.00</p>
+            </div>
+
+            <div class="product-card">
+             <div class="discount-badge">-10%</div>
+              <div class="favorite">&#9825;</div>
+              <img src="images/thumb-milk.png" alt="Product" />
+              <h4>Sunstar Fresh Milk</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.5</span></p>
+              <p class="price">₹20.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="discount-badge">-10%</div>
+             <div class="favorite">&#9825;</div>
+              <img src="images/thumb-raspberries.png" alt="Product" />
+              <h4>Sunstar Fresh Raspberries</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.4</span></p>
+              <p class="price">₹80.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="images/thumb-tomatoketchup.png" alt="Product" />
+              <h4>Sunstar Fresh Tomato ketchup</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.6</span></p>
+              <p class="price">₹80.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="images/thumb-tomatoes.png" alt="Product" />
+              <h4>Sunstar Fresh Tomatoes</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.3</span></p>
+              <p class="price">₹25.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="images/thumb-avocado.png" alt="Product" />
+              <h4>Sunstar Fresh Avacado Juice</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.5</span></p>
+              <p class="price">₹90.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="images/post-thumb-2.jpg" alt="Product" />
+              <h4>Sunstar Fresh Cashew Butter</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.9</span></p>
+              <p class="price">₹210.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col logo-social">
+      <img src="images/logo.png" alt="FoodMart Logo" class="logo" />
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><b>Shop By Departments ▼</b></li>
-        <li>Women</li>
-        <li>Men</li>
-        <li>Kids</li>
-        <li>Accessories</li>
-        <li>Pages ▼</li>
-        <li>Brand</li>
-        <li>Sale</li>
-        <li>Blog</li>
-      </ul>
-    </nav>
-  </header>
+   <div class="footer-col">
+          <h4>Ultras</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Our Journals</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Affiliate Programme</a></li>
+            <li><a href="#">Ultras Press</a></li>
+          </ul>
+        </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-left">
-        <h4>100 % Natural</h4>
-        <h1>Fresh Smoothie & Summer Juice 🍹</h1>
-        <p>Dive into a world of 100% organic, fresh, and healthy summer beverages.</p>
-        <button>Shop Now</button>
-      </div>
-      <div class="hero-right">
-        <img src="food-mart-main/images/product-thumb-1.png" alt="Smoothie Bottle"/>
-      </div>
-    </section>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Cookie Guidelines</a></li>
+            <li><a href="#">Delivery Information</a></li>
+          </ul>
+        </div>
 
-    <section class="sale-cards">
-      <div class="card green">
-        <h3>20% OFF</h3>
-        <p>Fruits & Vegetables</p>
-        <a href="#">Shop Collection →</a>
-        <img src="food-mart-main/images/ad-image-1.png" alt="Vegetables">
-      </div>
-      <div class="card peach">
-        <h3>15% OFF</h3>
-        <p>Baked Products</p>
-        <a href="#">Shop Collection →</a>
-        <img src="food-mart-main/images/ad-image-2.png" alt="Baked Goods">
-      </div>
-    </section>
-  </main>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Cookie Guidelines</a></li>
+            <li><a href="#">Delivery Information</a></li>
+          </ul>
+        </div>
 
-  <script src="script.js"></script>
-</body>
+        <div class="footer-col subscribe">
+          <h4>Subscribe Us</h4>
+          <p>
+            Subscribe to our newsletter to get updates about our grand offers.
+          </p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email Address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Foodmart. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
