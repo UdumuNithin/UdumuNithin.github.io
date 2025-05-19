@@ -154,7 +154,7 @@ section {
 }
 
 .skills-container li:hover {
-  background-color: #1b1a13;
+  background-color: #fefefb;
   color: rgb(239, 233, 233);
   transform: scale(1.05);
 }
@@ -169,7 +169,7 @@ section {
 }
 
 .contact-item:hover {
-  background-color: #0c0d0d;
+  background-color: #c1c9c9;
   color: rgb(238, 233, 233);
   transform: scale(1.05);
 }
