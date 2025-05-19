@@ -135,7 +135,7 @@ section {
 
 .services-list li:hover {
   background-color: #141212;
-  color: black;
+  color: rgb(255, 254, 254);
   transform: scale(1.05);
 }
 
