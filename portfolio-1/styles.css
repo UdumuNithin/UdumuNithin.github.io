@@ -55,7 +55,7 @@ section {
 
 /* HOME / INTRO SECTION */
 #intro {
-  display: flex;
+  display:baseline;
   align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
