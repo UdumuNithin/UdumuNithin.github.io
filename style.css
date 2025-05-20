@@ -1,0 +1,92 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #bbbbbb;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+h3 {
+  color: #4fc3f7;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+/* Ordered list */
+ol {
+  background: #1e1e1e;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
+}
+
+/* List items */
+li {
+  margin: 12px 0;
+  font-size: 17px;
+  color: #e0e0e0;
+}
+
+/* Links */
+a {
+  color: #82b1ff;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+  border-bottom: 1px dashed #ffffff;
+}
+
+/* Divider */
+hr {
+  margin: 40px auto;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #333, #555, #333);
+  width: 80%;
+  border-radius: 5px;
+}
+/* Floating animation */
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Hover card scale */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+.btn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
