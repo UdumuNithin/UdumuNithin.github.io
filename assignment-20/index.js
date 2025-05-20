@@ -1,19 +1,28 @@
-const customers = [
-  { cart: "1234567890", pin: "1234", name: "John", balance: 0 },
-  { cart: "1234567891", pin: "2345", name: "Cathy", balance: 0 },
-];
+document.getElementById("emailForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const email = document.getElementById("emailInput").value.trim();
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = "Loading...";
 
-const login = () => {
-  const card = document.getElementById("card").value;
-  const pin = document.getElementById("pin").value;
-  const msg = document.getElementById("msg");
-  const box = document.getElementById("login-box");
+  try {
+    const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+    const users = await userRes.json();
 
-  const customer = customers.find(c => c.cart === card && c.pin === pin);
+    const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
 
-  if (customer) {
-    box.innerHTML = `<h2>Welcome, ${customer.name}!</h2>`;
-  } else {
-    msg.textContent = "Invalid card number or PIN!";
+    if (user) {
+      const postsRes = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
+      const posts = await postsRes.json();
+
+      resultDiv.innerHTML = `
+        Name: ${user.name}<br>
+        Number of Posts: ${posts.length}
+      `;
+    } else {
+      resultDiv.textContent = "No user found with that email.";
+    }
+  } catch (err) {
+    resultDiv.textContent = "Error fetching data.";
   }
-};
+});
