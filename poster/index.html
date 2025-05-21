@@ -6,11 +6,11 @@
   <style>
     body {
       margin: 0;
-      background-color: black;
+      height: 100vh;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       font-family: 'Arial Black', sans-serif;
     }
 
@@ -21,38 +21,66 @@
       background-image: url('WhatsApp Image 2025-05-21 at 18.24.28_25c398a8.jpg');
       background-size: cover;
       background-position: center;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-      filter: brightness(0.85) contrast(1.1);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.8) 90%);
+      z-index: 1;
     }
 
     .title {
       position: absolute;
-      top: 20px;
+      top: 30px;
       width: 100%;
       text-align: center;
-      font-size: 60px;
-      color: white;
-      letter-spacing: 6px;
-      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+      font-size: 64px;
+      color: #fff;
+      letter-spacing: 10px;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #000;
+      z-index: 2;
     }
 
     .tagline {
       position: absolute;
-      bottom: 40px;
+      bottom: 50px;
       width: 100%;
       text-align: center;
-      font-size: 24px;
+      font-size: 22px;
+      color: #f0f0f0;
+      letter-spacing: 2px;
       font-style: italic;
-      color: #eee;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      text-shadow: 1px 1px 5px #000;
+      z-index: 2;
+    }
+
+    .credits {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      letter-spacing: 1px;
+      z-index: 2;
     }
   </style>
 </head>
 <body>
   <div class="poster">
+    <div class="overlay"></div>
     <div class="title">THE SWITCH</div>
-    <div class="tagline">Two bikes. Six riders. One decision.</div>
+    <div class="tagline">Two wheels. Two paths. One choice.</div>
+    <div class="credits">A StreetSide Production • Directed by You • Coming Soon</div>
   </div>
 </body>
 </html>
+
 
