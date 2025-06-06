@@ -141,6 +141,19 @@ main section {
 .project-link:hover {
   text-decoration: underline;
 }
+/* Project 3 Specific Styling */
+.project-card:nth-child(3) {
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+  border: 2px solid #a5d6a7;
+}
+
+.project-card:nth-child(3) h3 {
+  color: #2e7d32;
+}
+
+.project-card:nth-child(3) p {
+  font-style: italic;
+}
 
 /* Project 4 Specific Styling */
 .project-card:nth-child(4) {
