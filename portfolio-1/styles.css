@@ -141,6 +141,32 @@ main section {
 .project-link:hover {
   text-decoration: underline;
 }
+/* Project 1 Specific Styling */
+.project-card:nth-child(1) {
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+  border: 2px solid #a5d6a7;
+}
+
+.project-card:nth-child(1) h3 {
+  color: #2e7d32;
+}
+
+.project-card:nth-child(1) p {
+  font-style: italic;
+}
+/* Project 2 Specific Styling */
+.project-card:nth-child(2) {
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+  border: 2px solid #a5d6a7;
+}
+
+.project-card:nth-child(2) h3 {
+  color: #2e7d32;
+}
+
+.project-card:nth-child(2) p {
+  font-style: italic;
+}
 /* Project 3 Specific Styling */
 .project-card:nth-child(3) {
   background: linear-gradient(to right, #f1f8e9, #e0f7fa);
@@ -166,6 +192,18 @@ main section {
 }
 
 .project-card:nth-child(4) p {
+  font-style: italic;
+}/* Project 5 Specific Styling */
+.project-card:nth-child(5) {
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+  border: 2px solid #a5d6a7;
+}
+
+.project-card:nth-child(5) h3 {
+  color: #2e7d32;
+}
+
+.project-card:nth-child(5) p {
   font-style: italic;
 }
 
